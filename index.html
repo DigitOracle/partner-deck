@@ -588,6 +588,81 @@
     text-overflow: ellipsis;
   }
 
+
+  /* ── SLIDE 7 — DELIVERY FRAMEWORK ── */
+  .s7-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s7.active .s7-in { opacity: 1; transform: translateY(0); }
+
+  .s7-phase-table {
+    width: 100%;
+    border-collapse: collapse;
+    flex: 1.15;
+    min-width: 0;
+  }
+  .s7-phase-table thead tr th {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0 0.6rem 0.5rem 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  .s7-phase-table tbody tr {
+    border-bottom: 1px solid var(--ink20);
+  }
+  .s7-phase-table tbody tr:last-child { border-bottom: none; }
+  .s7-phase-table tbody td {
+    padding: 0.38rem 0.6rem;
+    vertical-align: middle;
+  }
+  .s7-phase {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .s7-name {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .s7-riba {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .s7-itil {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--ink60);
+    white-space: nowrap;
+  }
+  .s7-what {
+    font-size: 0.68rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.4;
+  }
+  .s7-gate {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--ink20);
+    border: 1.5px solid var(--ink20);
+    flex-shrink: 0;
+  }
+  tr.s7-highlight td { background: rgba(201,168,76,0.06); }
+  tr.s7-highlight .s7-gate { background: var(--gold); border-color: var(--gold); }
+
 </style>
 </head>
 <body>
@@ -1009,6 +1084,126 @@
     </div>
   </div>
 
+  <!-- SLIDE 7 — PERIODICHOTOMY® DX DELIVERY FRAMEWORK -->
+  <div class="slide" id="s7">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s7.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:5vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:0.8; min-width:0;">
+        <div class="eyebrow s7-in" style="--d:0.05s">Delivery Framework</div>
+        <div class="gold-rule s7-in" style="--d:0.10s"></div>
+        <h1 class="s7-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.6vw,3.4rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.7rem;">
+          Periodichotomy<sup style="font-size:0.5em;">®</sup> DX<br>
+          <em style="color:var(--gold);">The architecture your<br>projects already speak.</em>
+        </h1>
+        <p class="s7-in" style="--d:0.22s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:36ch; margin-bottom:1rem;">
+          Periodichotomy® DX maps precisely to <strong style="color:var(--ink); font-weight:500;">RIBA Plan of Work Stages 0–7</strong> and the <strong style="color:var(--ink); font-weight:500;">ITIL v4 Service Value Chain</strong> — the two frameworks your project teams already operate within.
+        </p>
+        <p class="s7-in" style="--d:0.28s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:36ch;">
+          8 compliance gates. 27,762 TTMs ready to activate. No phase proceeds without regulatory clearance.
+        </p>
+        <!-- Framework badges -->
+        <div class="s7-in" style="--d:0.34s; display:flex; gap:0.7rem; margin-top:1.2rem; flex-wrap:wrap;">
+          <div style="padding:0.4rem 0.8rem; border:1.5px solid var(--gold); font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold);">RIBA Plan of Work</div>
+          <div style="padding:0.4rem 0.8rem; border:1.5px solid var(--ink20); font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">ITIL v4</div>
+          <div style="padding:0.4rem 0.8rem; border:1.5px solid var(--ink20); font-size:0.68rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">ISO 19650</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Phase table -->
+      <div class="s7-in" style="--d:0.38s; flex:1.2; min-width:0;">
+        <table class="s7-phase-table">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Name</th>
+              <th>RIBA Stage</th>
+              <th>ITIL v4</th>
+              <th style="width:30%;">Focus</th>
+              <th>Gate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="s7-phase">Φ0</td>
+              <td class="s7-name">Strategize</td>
+              <td class="s7-riba">Stage 0</td>
+              <td class="s7-itil">Plan</td>
+              <td class="s7-what">Vision, mandate, regulatory scope definition</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr>
+              <td class="s7-phase">Φ1</td>
+              <td class="s7-name">Engage</td>
+              <td class="s7-riba">Stage 1</td>
+              <td class="s7-itil">Engage</td>
+              <td class="s7-what">Information gathering, baseline establishment</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr>
+              <td class="s7-phase">Φ2</td>
+              <td class="s7-name">Architect</td>
+              <td class="s7-riba">Stage 2</td>
+              <td class="s7-itil">Design &amp; Transition</td>
+              <td class="s7-what">Spatial concept, zone schema, TTM selection</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr class="s7-highlight">
+              <td class="s7-phase">Φ3</td>
+              <td class="s7-name">Specify</td>
+              <td class="s7-riba">Stage 3</td>
+              <td class="s7-itil">Design &amp; Transition</td>
+              <td class="s7-what">VIPER® sensor derivation, DigitOracle® gap analysis</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr class="s7-highlight">
+              <td class="s7-phase">Φ4</td>
+              <td class="s7-name">Configure</td>
+              <td class="s7-riba">Stage 4</td>
+              <td class="s7-itil">Obtain / Build</td>
+              <td class="s7-what">Technical design, procurement BOQ, compliance pack</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr>
+              <td class="s7-phase">Φ5</td>
+              <td class="s7-name">Deploy</td>
+              <td class="s7-riba">Stage 5</td>
+              <td class="s7-itil">Obtain / Build</td>
+              <td class="s7-what">Construction, installation, site supervision</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr>
+              <td class="s7-phase">Φ6</td>
+              <td class="s7-name">Validate</td>
+              <td class="s7-riba">Stage 6</td>
+              <td class="s7-itil">Deliver &amp; Support</td>
+              <td class="s7-what">Testing, commissioning, regulatory sign-off</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+            <tr>
+              <td class="s7-phase">Φ7</td>
+              <td class="s7-name">Operate</td>
+              <td class="s7-riba">Stage 7</td>
+              <td class="s7-itil">Continual Improve</td>
+              <td class="s7-what">Live operations, FM handover, DigitalAbbot® monitoring</td>
+              <td><span class="s7-gate"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="slide-num">07 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
   <!-- NAV DOTS + ARROWS -->
   <div id="nav-dots">
     <div class="nav-arrow" id="arrow-up">
@@ -1065,51 +1260,6 @@
     if (Math.abs(dx) > 50) goTo(current + (dx > 0 ? 1 : -1));
   });
 
-  // ── VIPER S6 node-network canvas ──
-  (function(){
-    const cv = document.getElementById('s6-canvas');
-    if (!cv) return;
-    const ctx = cv.getContext('2d');
-    let W, H, nodes = [];
-    function resize(){ W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
-    resize();
-    window.addEventListener('resize', resize);
-    for(let i=0;i<55;i++) nodes.push({
-      x: Math.random()*W, y: Math.random()*H,
-      vx: (Math.random()-0.5)*0.4, vy: (Math.random()-0.5)*0.4,
-      r: Math.random()*2.5+1
-    });
-    function draw(){
-      ctx.clearRect(0,0,W,H);
-      // lines
-      for(let i=0;i<nodes.length;i++){
-        for(let j=i+1;j<nodes.length;j++){
-          const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
-          const d=Math.sqrt(dx*dx+dy*dy);
-          if(d<140){
-            ctx.beginPath();
-            ctx.strokeStyle=`rgba(201,168,76,${0.5*(1-d/140)})`;
-            ctx.lineWidth=0.6;
-            ctx.moveTo(nodes[i].x,nodes[i].y);
-            ctx.lineTo(nodes[j].x,nodes[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-      // nodes
-      nodes.forEach(n=>{
-        ctx.beginPath();
-        ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
-        ctx.fillStyle='rgba(25,10,70,0.7)';
-        ctx.fill();
-        n.x+=n.vx; n.y+=n.vy;
-        if(n.x<0||n.x>W) n.vx*=-1;
-        if(n.y<0||n.y>H) n.vy*=-1;
-      });
-      requestAnimationFrame(draw);
-    }
-    draw();
-  })();
 
 </script>
 </body>
