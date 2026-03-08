@@ -374,6 +374,89 @@
   }
   .s3-moat-text strong { color: var(--gold); font-weight: 500; }
 
+
+  /* ── SLIDE 4 — THE MISSING LAYER ── */
+  .s4-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s4.active .s4-in { opacity: 1; transform: translateY(0); }
+
+  .s4-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 0.95;
+    min-width: 0;
+  }
+  .s4-layer {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.7rem 1rem;
+    background: var(--white);
+    box-shadow: 0 3px 14px rgba(25,10,70,0.06);
+    border-left: 3px solid var(--ink20);
+    transition: border-color 0.3s;
+  }
+  .s4-layer.highlight {
+    border-left-color: var(--gold);
+    background: var(--ink);
+  }
+  .s4-layer-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--ink20);
+    flex-shrink: 0;
+  }
+  .s4-layer.highlight .s4-layer-dot {
+    background: var(--gold);
+  }
+  .s4-layer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink60);
+    flex: 1;
+  }
+  .s4-layer.highlight .s4-layer-name {
+    color: var(--white);
+    font-weight: 600;
+  }
+  .s4-layer-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink20);
+    white-space: nowrap;
+  }
+  .s4-layer.highlight .s4-layer-tag {
+    color: var(--gold);
+  }
+  .s4-arrow {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--ink20);
+    line-height: 1;
+    margin: -0.1rem 0;
+  }
+  .s4-disclaimer {
+    margin-top: 1rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-left: 3px solid var(--gold);
+  }
+  .s4-disclaimer-text {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.55;
+  }
+  .s4-disclaimer-text strong { color: var(--ink); font-weight: 500; }
+
 </style>
 </head>
 <body>
@@ -561,6 +644,84 @@
     </div>
 
     <div class="slide-num">03 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — THE MISSING LAYER -->
+  <div class="slide" id="s4">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s4.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:6vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:1.05; min-width:0;">
+        <div class="eyebrow s4-in" style="--d:0.05s">The Position</div>
+        <div class="gold-rule s4-in" style="--d:0.10s"></div>
+        <h1 class="s4-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.8rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          Not a replacement<br>for your stack.<br>
+          <em style="color:var(--gold);">The layer beneath it.</em>
+        </h1>
+        <p class="s4-in" style="--d:0.25s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:42ch; margin-bottom:0.8rem;">
+          Your BIM platform, Digital Twin tools, GIS systems, and IoT infrastructure are sound investments. <strong style="color:var(--ink); font-weight:500;">DigitAlchemy®</strong> does not replace them.
+        </p>
+        <p class="s4-in" style="--d:0.30s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:42ch;">
+          It provides the regulatory intelligence foundation that makes every output from those tools <strong style="color:var(--ink); font-weight:500;">traceable, compliant, and defensible</strong> — in the procurement environments where that distinction decides who wins.
+        </p>
+      </div>
+
+      <!-- RIGHT: Stack diagram -->
+      <div class="s4-stack s4-in" style="--d:0.38s;">
+
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:0.3rem;">Your Existing Stack</div>
+
+        <div class="s4-layer">
+          <div class="s4-layer-dot"></div>
+          <div class="s4-layer-name">Smart City / Urban Platform</div>
+          <div class="s4-layer-tag">Applications</div>
+        </div>
+        <div class="s4-arrow">↓</div>
+        <div class="s4-layer">
+          <div class="s4-layer-dot"></div>
+          <div class="s4-layer-name">Digital Twin Environment</div>
+          <div class="s4-layer-tag">Visualisation</div>
+        </div>
+        <div class="s4-arrow">↓</div>
+        <div class="s4-layer">
+          <div class="s4-layer-dot"></div>
+          <div class="s4-layer-name">BIM · GIS · IoT Systems</div>
+          <div class="s4-layer-tag">Data &amp; Geometry</div>
+        </div>
+        <div class="s4-arrow">↓</div>
+
+        <!-- THE HIGHLIGHT — DigitAlchemy -->
+        <div class="s4-layer highlight">
+          <div class="s4-layer-dot"></div>
+          <div class="s4-layer-name">DigitAlchemy® — Periodichotomy® Engine</div>
+          <div class="s4-layer-tag">← Missing Layer</div>
+        </div>
+        <div class="s4-arrow" style="color:var(--gold);">↓</div>
+
+        <div class="s4-layer">
+          <div class="s4-layer-dot"></div>
+          <div class="s4-layer-name">762 Standards · 3,935 Regulations · 69 Countries</div>
+          <div class="s4-layer-tag">Verified Corpus</div>
+        </div>
+
+        <div class="s4-disclaimer">
+          <div class="s4-disclaimer-text">
+            <strong>DigitOracle®</strong> · <strong>VIPER®</strong> · <strong>DigitalAbbot®</strong> — all sit at the DigitAlchemy® layer, surfacing regulatory intelligence directly into your existing project workflows.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">04 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
