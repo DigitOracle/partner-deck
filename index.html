@@ -826,6 +826,93 @@
     flex-shrink: 0;
   }
 
+
+  /* ── SLIDE 10 — PATENT LAYER ── */
+  .s10-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s10.active .s10-in { opacity: 1; transform: translateY(0); }
+
+  .s10-patent-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1.05;
+    min-width: 0;
+  }
+  .s10-patent {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 4px 24px rgba(25,10,70,0.08);
+  }
+  .s10-patent-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    gap: 1rem;
+  }
+  .s10-patent-num {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .s10-patent-status {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--ink);
+    padding: 0.2rem 0.5rem;
+    flex-shrink: 0;
+  }
+  .s10-patent-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .s10-patent-what {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--ink60);
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+  }
+  .s10-patent-why {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.55;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--ink20);
+  }
+  .s10-patent-why strong { color: var(--ink); font-weight: 500; }
+
+  .s10-moat {
+    margin-top: 1.2rem;
+    padding: 0.8rem 1rem;
+    background: var(--ink);
+    border-left: 3px solid var(--gold);
+  }
+  .s10-moat-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(250,250,248,0.82);
+    line-height: 1.6;
+  }
+  .s10-moat-text strong { color: var(--gold); font-weight: 500; }
+
 </style>
 </head>
 <body>
@@ -1530,6 +1617,89 @@
     </div>
 
     <div class="slide-num">09 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10 — PATENT LAYER -->
+  <div class="slide" id="s10">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s10.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:6vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:0.85; min-width:0;">
+        <div class="eyebrow s10-in" style="--d:0.05s">Intellectual Property</div>
+        <div class="gold-rule s10-in" style="--d:0.10s"></div>
+        <h1 class="s10-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.6vw,3.4rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          The method is protected.<br>
+          <em style="color:var(--gold);">The output is<br>legally defensible.</em>
+        </h1>
+        <p class="s10-in" style="--d:0.22s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch; margin-bottom:0.8rem;">
+          Two patent filings with UAE priority protect the core algorithms that power <strong style="color:var(--ink); font-weight:500;">Periodichotomy®</strong>. These are not process patents on a workflow — they protect the deterministic method itself.
+        </p>
+        <p class="s10-in" style="--d:0.28s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch;">
+          No competitor can replicate the output by purchasing software, hiring consultants, or copying the framework. The derivation method is the barrier.
+        </p>
+
+        <!-- IP Stats -->
+        <div class="s10-in" style="--d:0.34s; display:flex; gap:1.5rem; margin-top:1.2rem; padding-top:0.9rem; border-top:1px solid var(--ink20);">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; color:var(--gold); line-height:1;">2</div>
+            <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink60);">Patent Filings</div>
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; color:var(--gold); line-height:1;">UAE</div>
+            <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink60);">Priority Jurisdiction</div>
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; color:var(--gold); line-height:1;">5</div>
+            <div style="font-size:0.62rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink60);">Registered Trademarks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Two patent cards -->
+      <div class="s10-patent-cards s10-in" style="--d:0.38s;">
+
+        <!-- Patent 1 -->
+        <div class="s10-patent">
+          <div class="s10-patent-header">
+            <div class="s10-patent-num">Filing 01</div>
+            <div class="s10-patent-status">UAE Priority · Pending</div>
+          </div>
+          <div class="s10-patent-title">Regulatory Compression Algorithm</div>
+          <div class="s10-patent-what">
+            The method by which 762 international standards and 3,935 government regulations are algorithmically reduced to a deterministic, project-specific compliance output — without human interpretation at the point of derivation.
+          </div>
+          <div class="s10-patent-why">
+            <strong>What this means for you:</strong> Every compliance output from DigitOracle® carries a traceable, repeatable derivation chain that can be presented to any regulator, procurement body, or auditor as legally defensible evidence — not consultant opinion.
+          </div>
+        </div>
+
+        <!-- Patent 2 -->
+        <div class="s10-patent">
+          <div class="s10-patent-header">
+            <div class="s10-patent-num">Filing 02</div>
+            <div class="s10-patent-status">UAE Priority · Pending</div>
+          </div>
+          <div class="s10-patent-title">Sensor Derivation Pipeline</div>
+          <div class="s10-patent-what">
+            The 14-layer algorithm by which sensor specifications are derived from regulatory documents and asset archetypes — producing a fully justified IoT deployment package where every sensor traces back to a specific standard or regulation.
+          </div>
+          <div class="s10-patent-why">
+            <strong>What this means for you:</strong> VIPER® sensor outputs are not recommendations — they are algorithmically derived specifications. When a government client asks "why this sensor?", the answer is a regulation, not a preference.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">10 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
