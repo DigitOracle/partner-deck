@@ -317,6 +317,63 @@
     line-height: 1.5;
   }
 
+
+  /* ── SLIDE 3 — PERIODICHOTOMY ── */
+  .s3-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s3.active .s3-in { opacity: 1; transform: translateY(0); }
+
+  .s3-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75rem;
+    flex: 0.95;
+    min-width: 0;
+  }
+  .s3-stat {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 0.9rem 1rem;
+    box-shadow: 0 3px 18px rgba(25,10,70,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .s3-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .s3-stat-num em { color: var(--gold); font-style: normal; }
+  .s3-stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink60);
+  }
+  .s3-moat {
+    margin-top: 1.4rem;
+    padding: 0.8rem 1rem;
+    background: var(--ink);
+    border-left: 3px solid var(--gold);
+  }
+  .s3-moat-text {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: rgba(250,250,248,0.85);
+    line-height: 1.6;
+  }
+  .s3-moat-text strong { color: var(--gold); font-weight: 500; }
+
 </style>
 </head>
 <body>
@@ -362,11 +419,11 @@
 
   <!-- SLIDE 2 — WHAT DIGITALCHEMY® IS -->
   <div class="slide" id="s2">
-    <video class="slide-bg" autoplay muted loop playsinline>
+    <video class="slide-video" autoplay muted loop playsinline>
       <source src="assets/bg-s2.mp4" type="video/mp4">
     </video>
     <div class="slide-overlay"></div>
-    <div class="slide-content" style="padding: 5.5rem 9vw 5.5rem; flex-direction: row; gap: 5vw; align-items: center;">
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:5vw; align-items:center; justify-content:flex-start;">
 
       <!-- LEFT: Headline + positioning -->
       <div style="flex: 1.1; min-width: 0;">
@@ -432,6 +489,78 @@
     </div>
 
     <div class="slide-num">02 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — PERIODICHOTOMY® ENGINE -->
+  <div class="slide" id="s3">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s3.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:5vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:1.05; min-width:0;">
+        <div class="eyebrow s3-in" style="--d:0.05s">The Engine</div>
+        <div class="gold-rule s3-in" style="--d:0.10s"></div>
+        <h1 class="s3-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.8rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          Periodichotomy<sup style="font-size:0.5em;">®</sup><br>
+          <em style="color:var(--gold);">The operating system<br>for compliance intelligence.</em>
+        </h1>
+        <p class="s3-in" style="--d:0.25s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:42ch; margin-bottom:0.5rem;">
+          Periodichotomy® is not a database. It is a living, machine-readable regulatory intelligence engine — curated over years from primary sources across 69 countries and 39 standards bodies.
+        </p>
+        <p class="s3-in" style="--d:0.30s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:42ch;">
+          Every output from <strong style="color:var(--ink); font-weight:500;">DigitOracle®</strong>, <strong style="color:var(--ink); font-weight:500;">VIPER®</strong>, and the delivery framework traces back to a specific standard or regulation within this engine. That traceability is the competitive moat.
+        </p>
+        <div class="s3-moat s3-in" style="--d:0.38s;">
+          <div class="s3-moat-text">
+            <strong>This cannot be replicated by purchasing software.</strong> The Periodichotomy® corpus represents years of expert curation, cross-jurisdiction mapping, and regulatory interpretation — now encoded into 2 patent filings with UAE priority.
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Stat grid -->
+      <div class="s3-stat-grid s3-in" style="--d:0.42s;">
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>762</em></div>
+          <div class="s3-stat-label">Verified International Standards</div>
+        </div>
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>3,935</em></div>
+          <div class="s3-stat-label">Government Regulations</div>
+        </div>
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>69</em></div>
+          <div class="s3-stat-label">Countries Covered</div>
+        </div>
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>39</em></div>
+          <div class="s3-stat-label">Standards Bodies</div>
+        </div>
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>43</em></div>
+          <div class="s3-stat-label">Technical Categories</div>
+        </div>
+
+        <div class="s3-stat">
+          <div class="s3-stat-num"><em>27</em></div>
+          <div class="s3-stat-label">Regulatory Domain Scopes</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">03 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
