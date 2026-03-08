@@ -663,6 +663,101 @@
   tr.s7-highlight td { background: rgba(201,168,76,0.06); }
   tr.s7-highlight .s7-gate { background: var(--gold); border-color: var(--gold); }
 
+
+  /* ── SLIDE 8 — TTM REGISTRY ── */
+  .s8-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s8.active .s8-in { opacity: 1; transform: translateY(0); }
+
+  .s8-hero-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.1rem;
+  }
+  .s8-hero-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink60);
+    margin-bottom: 1.2rem;
+  }
+  .s8-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1.05;
+    min-width: 0;
+  }
+  .s8-module {
+    background: var(--white);
+    border-left: 3px solid var(--ink20);
+    padding: 0.65rem 0.9rem;
+    box-shadow: 0 2px 12px rgba(25,10,70,0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .s8-module.active-module {
+    border-left-color: var(--gold);
+    background: var(--ink);
+  }
+  .s8-module-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 4.5rem;
+  }
+  .s8-module-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    flex: 1;
+  }
+  .s8-module.active-module .s8-module-name { color: var(--white); }
+  .s8-module-desc {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.4;
+    flex: 1.2;
+  }
+  .s8-module.active-module .s8-module-desc { color: rgba(250,250,248,0.65); }
+  .s8-substat {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--ink20);
+  }
+  .s8-substat-item { text-align: left; }
+  .s8-substat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .s8-substat-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink60);
+  }
+
 </style>
 </head>
 <body>
@@ -1198,6 +1293,95 @@
 
     </div>
     <div class="slide-num">07 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8 — INTELLIGENCE MODULES -->
+  <div class="slide" id="s8">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s8.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:6vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:0.85; min-width:0;">
+        <div class="eyebrow s8-in" style="--d:0.05s">Pre-Loaded Intelligence</div>
+        <div class="gold-rule s8-in" style="--d:0.10s"></div>
+        <div class="s8-hero-num s8-in" style="--d:0.15s;">27,762</div>
+        <div class="s8-hero-label s8-in" style="--d:0.18s;">Intelligence Modules Ready to Activate</div>
+
+        <p class="s8-in" style="--d:0.24s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch; margin-bottom:0.8rem;">
+          You win a contract. You define the project type, the country, and the delivery phase. The platform loads the exact intelligence package for that combination — every applicable standard, every regulation, every compliance checkpoint. Already researched. Already traceable. Already defensible.
+        </p>
+        <p class="s8-in" style="--d:0.30s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch;">
+          This took years to build. It cannot be replicated by purchasing software.
+        </p>
+
+        <div class="s8-substat s8-in" style="--d:0.36s;">
+          <div class="s8-substat-item">
+            <div class="s8-substat-num">527,478</div>
+            <div class="s8-substat-label">Capability Configs</div>
+          </div>
+          <div class="s8-substat-item">
+            <div class="s8-substat-num">3</div>
+            <div class="s8-substat-label">Tier Hierarchy</div>
+          </div>
+          <div class="s8-substat-item">
+            <div class="s8-substat-num">27</div>
+            <div class="s8-substat-label">Domain Crosswalks</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Module examples -->
+      <div class="s8-modules s8-in" style="--d:0.40s;">
+
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:0.2rem;">Example Intelligence Modules</div>
+
+        <div class="s8-module active-module">
+          <div class="s8-module-tag">Smart City</div>
+          <div class="s8-module-name">Urban Digital Transformation</div>
+          <div class="s8-module-desc">Smart infrastructure, governance, IoT deployment — jurisdiction-specific from day one</div>
+        </div>
+
+        <div class="s8-module">
+          <div class="s8-module-tag">Digital Twin</div>
+          <div class="s8-module-name">Built Environment Lifecycle</div>
+          <div class="s8-module-desc">Asset modelling, sensor integration, FM handover — RIBA-aligned delivery</div>
+        </div>
+
+        <div class="s8-module">
+          <div class="s8-module-tag">BIM</div>
+          <div class="s8-module-name">Model Review &amp; Compliance</div>
+          <div class="s8-module-desc">ISO 19650 workflows, IFC validation, information delivery standards</div>
+        </div>
+
+        <div class="s8-module">
+          <div class="s8-module-tag">AI Gov</div>
+          <div class="s8-module-name">AI Governance &amp; Ethics</div>
+          <div class="s8-module-desc">Regulatory frameworks for AI deployment in government and infrastructure</div>
+        </div>
+
+        <div class="s8-module">
+          <div class="s8-module-tag">Real Estate</div>
+          <div class="s8-module-name">Feasibility &amp; Unit Mix</div>
+          <div class="s8-module-desc">Market-informed development advisory with Abu Dhabi CFPS V2.0 compliance</div>
+        </div>
+
+        <div class="s8-module">
+          <div class="s8-module-tag">ESG</div>
+          <div class="s8-module-name">Sustainability Quantification</div>
+          <div class="s8-module-desc">Standards-backed ESG measurement, reporting, and regulatory alignment</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">08 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
