@@ -457,6 +457,74 @@
   }
   .s4-disclaimer-text strong { color: var(--ink); font-weight: 500; }
 
+
+  /* ── SLIDE 5 — DIGITORACLE ── */
+  .s5-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s5.active .s5-in { opacity: 1; transform: translateY(0); }
+
+  .s5-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 0.95;
+    min-width: 0;
+  }
+  .s5-card {
+    background: var(--white);
+    border-left: 3px solid var(--ink20);
+    padding: 0.7rem 1rem;
+    box-shadow: 0 3px 14px rgba(25,10,70,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .s5-card.hero-card {
+    border-left-color: var(--gold);
+    background: var(--ink);
+    padding: 0.9rem 1rem;
+  }
+  .s5-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 1.6rem;
+  }
+  .s5-card-body { flex: 1; min-width: 0; }
+  .s5-card-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.01em;
+  }
+  .s5-card.hero-card .s5-card-title { color: var(--gold); font-size: 0.88rem; }
+  .s5-card-desc {
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.5;
+  }
+  .s5-card.hero-card .s5-card-desc { color: rgba(250,250,248,0.75); }
+  .s5-hero-stat {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.5rem 1.1rem;
+    border: 1.5px solid var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+
 </style>
 </head>
 <body>
@@ -722,6 +790,86 @@
     </div>
 
     <div class="slide-num">04 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — DIGITORACLE® -->
+  <div class="slide" id="s5">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s5.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:6vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:1.05; min-width:0;">
+        <div class="eyebrow s5-in" style="--d:0.05s">Compliance Intelligence</div>
+        <div class="gold-rule s5-in" style="--d:0.10s"></div>
+        <h1 class="s5-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.8rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          DigitOracle<sup style="font-size:0.5em;">®</sup><br>
+          <em style="color:var(--gold);">Every output traceable.<br>Every tender defensible.</em>
+        </h1>
+        <p class="s5-in" style="--d:0.25s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:42ch; margin-bottom:0.6rem;">
+          DigitOracle® is the compliance intelligence interface of the <strong style="color:var(--ink); font-weight:500;">Periodichotomy®</strong> engine. It translates 762 verified standards and 3,935 regulations into project-specific, audit-ready outputs — at a speed no manual process can match.
+        </p>
+        <div class="s5-hero-stat s5-in" style="--d:0.32s;">
+          2D PDF Floor Plan → Revit + IFC Model &nbsp;·&nbsp; Under 60 Seconds
+        </div>
+      </div>
+
+      <!-- RIGHT: Capability cards -->
+      <div class="s5-cards s5-in" style="--d:0.40s;">
+
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:0.2rem;">DigitOracle® Capabilities</div>
+
+        <!-- Hero card -->
+        <div class="s5-card hero-card">
+          <div class="s5-card-num">01</div>
+          <div class="s5-card-body">
+            <div class="s5-card-title">PDF → Revit &amp; IFC Conversion</div>
+            <div class="s5-card-desc">Upload any 2D PDF floor plan. DigitOracle® returns a fully structured Revit model and IFC file in under 60 seconds — ready for BIM workflows, Digital Twin ingestion, and compliance checking.</div>
+          </div>
+        </div>
+
+        <div class="s5-card">
+          <div class="s5-card-num">02</div>
+          <div class="s5-card-body">
+            <div class="s5-card-title">Regulatory Gap Analysis</div>
+            <div class="s5-card-desc">Project scope × jurisdiction → instant identification of applicable standards and compliance gaps, mapped to your deliverables.</div>
+          </div>
+        </div>
+
+        <div class="s5-card">
+          <div class="s5-card-num">03</div>
+          <div class="s5-card-body">
+            <div class="s5-card-title">Standards Applicability Mapping</div>
+            <div class="s5-card-desc">Cross-references your project type against 762 standards across 27 domains. Surfaces exactly what applies — nothing more, nothing less.</div>
+          </div>
+        </div>
+
+        <div class="s5-card">
+          <div class="s5-card-num">04</div>
+          <div class="s5-card-body">
+            <div class="s5-card-title">Audit-Ready Compliance Reports</div>
+            <div class="s5-card-desc">Generates documentation suitable for tender submission, government procurement, and post-completion regulatory sign-off.</div>
+          </div>
+        </div>
+
+        <div class="s5-card">
+          <div class="s5-card-num">05</div>
+          <div class="s5-card-body">
+            <div class="s5-card-title">Cross-Jurisdiction Mapping</div>
+            <div class="s5-card-desc">Handles projects spanning multiple regulatory environments — critical for MENA mega-projects operating across UAE, KSA, Kuwait, and beyond.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">05 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
