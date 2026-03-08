@@ -271,6 +271,52 @@
   #s1.active .headline   { opacity:1; transform:translateY(0); transition-delay:0.15s; }
   #s1.active .subhead    { opacity:1; transform:translateY(0); transition-delay:0.22s; }
 
+
+  /* ── SLIDE 2 ── */
+  .s2-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s2.active .s2-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .s2-tm-card {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    padding: 0.65rem 0.9rem;
+    box-shadow: 0 3px 16px rgba(25,10,70,0.06);
+  }
+  .s2-tm-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+  }
+  .s2-tm-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .s2-tm-name sup { font-size: 0.6em; }
+  .s2-tm-tag {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .s2-tm-desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--ink60);
+    line-height: 1.5;
+  }
+
 </style>
 </head>
 <body>
@@ -308,6 +354,84 @@
     </div>
 
     <div class="slide-num">01 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — WHAT DIGITALCHEMY® IS -->
+  <div class="slide" id="s2">
+    <video class="slide-bg" autoplay muted loop playsinline>
+      <source src="assets/bg-s2.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding: 5.5rem 9vw 5.5rem; flex-direction: row; gap: 5vw; align-items: center;">
+
+      <!-- LEFT: Headline + positioning -->
+      <div style="flex: 1.1; min-width: 0;">
+        <div class="eyebrow s2-in" style="--d:0.05s">The Platform</div>
+        <div class="gold-rule s2-in" style="--d:0.10s"></div>
+        <h1 class="s2-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.8rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.5rem;">
+          Not application&#8209;first.<br><em style="color:var(--gold); font-style:italic;">Compliance&#8209;up.</em>
+        </h1>
+        <p class="s2-in" style="--d:0.25s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:44ch; margin-bottom:1rem;">
+          Every other Digital Transformation platform starts with the application and attempts to layer compliance afterward. <strong style="color:var(--ink); font-weight:500;">DigitAlchemy®</strong> starts with 762 verified international standards and 3,935 government regulations — and builds every output upward from that foundation.
+        </p>
+        <p class="s2-in" style="--d:0.32s; font-size:clamp(0.85rem,1.2vw,1.05rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:44ch;">
+          The result: outputs that are fully traceable, audit-ready, and defensible in sovereign procurement environments across <strong style="color:var(--ink); font-weight:500;">69 countries</strong>.
+        </p>
+      </div>
+
+      <!-- RIGHT: 5 trademark cards -->
+      <div class="s2-in" style="--d:0.4s; flex: 0.9; min-width: 0; display:flex; flex-direction:column; gap:0.7rem;">
+
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:0.2rem;">Platform Family — 5 Registered Trademarks</div>
+
+        <div class="s2-tm-card">
+          <div class="s2-tm-top">
+            <span class="s2-tm-name">Periodichotomy<sup>®</sup></span>
+            <span class="s2-tm-tag">Core Engine</span>
+          </div>
+          <div class="s2-tm-desc">762 standards · 69 countries · 27 regulatory domains. The intelligence layer that makes every output traceable.</div>
+        </div>
+
+        <div class="s2-tm-card">
+          <div class="s2-tm-top">
+            <span class="s2-tm-name">DigitOracle<sup>®</sup></span>
+            <span class="s2-tm-tag">Compliance AI</span>
+          </div>
+          <div class="s2-tm-desc">Regulatory gap analysis, standards applicability, and audit-ready compliance documentation across jurisdictions.</div>
+        </div>
+
+        <div class="s2-tm-card">
+          <div class="s2-tm-top">
+            <span class="s2-tm-name">VIPER<sup>®</sup></span>
+            <span class="s2-tm-tag">Sensor Intelligence</span>
+          </div>
+          <div class="s2-tm-desc">304 standards-derived sensor specifications across 9 scopes. Every IoT deployment justified by regulation.</div>
+        </div>
+
+        <div class="s2-tm-card">
+          <div class="s2-tm-top">
+            <span class="s2-tm-name">DigitalAbbot<sup>®</sup></span>
+            <span class="s2-tm-tag">Urban Intelligence</span>
+          </div>
+          <div class="s2-tm-desc">Research platform for Digital Transformation, IoT, and Generative AI — powering curriculum and thought leadership.</div>
+        </div>
+
+        <div class="s2-tm-card">
+          <div class="s2-tm-top">
+            <span class="s2-tm-name">Periodichotomy<sup>®</sup> DX</span>
+            <span class="s2-tm-tag">Delivery Framework</span>
+          </div>
+          <div class="s2-tm-desc">Φ0–Φ7 phase map · 8-gate governance · RIBA &amp; ITIL v4 aligned. Universal transformation delivery architecture.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">02 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
