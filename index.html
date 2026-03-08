@@ -758,6 +758,74 @@
     color: var(--ink60);
   }
 
+
+  /* ── SLIDE 9 — 27 DOMAINS ── */
+  .s9-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s9.active .s9-in { opacity: 1; transform: translateY(0); }
+
+  .s9-domain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.35rem;
+    flex: 1.2;
+    min-width: 0;
+    align-content: start;
+  }
+  .s9-domain-card {
+    background: var(--white);
+    border-left: 2.5px solid var(--ink20);
+    padding: 0.38rem 0.55rem;
+    box-shadow: 0 2px 8px rgba(25,10,70,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .s9-domain-card.cat-built   { border-left-color: var(--gold); }
+  .s9-domain-card.cat-infra   { border-left-color: #7B9E87; }
+  .s9-domain-card.cat-gov     { border-left-color: var(--ink); }
+  .s9-domain-card.cat-tech    { border-left-color: #8B7BB5; }
+  .s9-domain-card.cat-people  { border-left-color: #B5837B; }
+  .s9-domain-cat {
+    font-size: 0.52rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink20);
+    line-height: 1;
+  }
+  .s9-domain-name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  /* legend */
+  .s9-legend {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .s9-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.62rem;
+    font-weight: 500;
+    color: var(--ink60);
+  }
+  .s9-legend-dot {
+    width: 7px; height: 7px;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
 </style>
 </head>
 <body>
@@ -1382,6 +1450,86 @@
     </div>
 
     <div class="slide-num">08 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9 — 27 DOMAINS -->
+  <div class="slide" id="s9">
+    <video class="slide-video" autoplay muted loop playsinline>
+      <source src="assets/bg-s9.mp4" type="video/mp4">
+    </video>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:5vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:0.75; min-width:0;">
+        <div class="eyebrow s9-in" style="--d:0.05s">Domain Coverage</div>
+        <div class="gold-rule s9-in" style="--d:0.10s"></div>
+        <h1 class="s9-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.6vw,3.4rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          27 domains.<br>
+          <em style="color:var(--gold);">Whatever you build,<br>we already cover it.</em>
+        </h1>
+        <p class="s9-in" style="--d:0.22s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:36ch; margin-bottom:0.8rem;">
+          Every regulatory domain relevant to engineering, infrastructure, and digital transformation is mapped — with the standards, regulations, and compliance requirements already loaded for each one.
+        </p>
+        <p class="s9-in" style="--d:0.28s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:36ch;">
+          <strong style="color:var(--ink); font-weight:500;">DigitOracle®</strong> surfaces compliance intelligence across all 27. <strong style="color:var(--ink); font-weight:500;">VIPER®</strong> derives sensor specifications within them. <strong style="color:var(--ink); font-weight:500;">DigitalAbbot®</strong> tracks emerging standards across every domain in real time.
+        </p>
+
+        <!-- Legend -->
+        <div class="s9-legend s9-in" style="--d:0.34s;">
+          <div class="s9-legend-item"><div class="s9-legend-dot" style="background:var(--gold);"></div>Built Environment</div>
+          <div class="s9-legend-item"><div class="s9-legend-dot" style="background:#7B9E87;"></div>Infrastructure</div>
+          <div class="s9-legend-item"><div class="s9-legend-dot" style="background:var(--ink);"></div>Governance</div>
+          <div class="s9-legend-item"><div class="s9-legend-dot" style="background:#8B7BB5;"></div>Technology</div>
+          <div class="s9-legend-item"><div class="s9-legend-dot" style="background:#B5837B;"></div>People &amp; Place</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: All 27 domain cards -->
+      <div class="s9-domain-grid s9-in" style="--d:0.38s;">
+
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">Smart Cities</div></div>
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">Digital Transformation</div></div>
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">BIM &amp; Information Mgmt</div></div>
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">Digital Twin</div></div>
+
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">IoT &amp; Sensors</div></div>
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">Cybersecurity &amp; Privacy</div></div>
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">Data Governance &amp; Quality</div></div>
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">AI &amp; Machine Learning</div></div>
+
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">Geospatial &amp; GIS</div></div>
+        <div class="s9-domain-card cat-infra"><div class="s9-domain-cat">Infrastructure</div><div class="s9-domain-name">Telecommunications &amp; ICT</div></div>
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">Cloud &amp; Data Centres</div></div>
+        <div class="s9-domain-card cat-built"><div class="s9-domain-cat">Built Env</div><div class="s9-domain-name">Construction Technology</div></div>
+
+        <div class="s9-domain-card cat-infra"><div class="s9-domain-cat">Infrastructure</div><div class="s9-domain-name">Asset Management</div></div>
+        <div class="s9-domain-card cat-people"><div class="s9-domain-cat">People &amp; Place</div><div class="s9-domain-name">Energy &amp; Sustainability</div></div>
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">Blockchain &amp; Digital Finance</div></div>
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">Fintech &amp; Payments</div></div>
+
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">E-Government</div></div>
+        <div class="s9-domain-card cat-tech"><div class="s9-domain-cat">Technology</div><div class="s9-domain-name">Startup &amp; Innovation</div></div>
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">Governance Risk &amp; Compliance</div></div>
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">Quality Management</div></div>
+
+        <div class="s9-domain-card cat-gov"><div class="s9-domain-cat">Governance</div><div class="s9-domain-name">Procurement &amp; Contracts</div></div>
+        <div class="s9-domain-card cat-people"><div class="s9-domain-cat">People &amp; Place</div><div class="s9-domain-name">Accessibility</div></div>
+        <div class="s9-domain-card cat-people"><div class="s9-domain-cat">People &amp; Place</div><div class="s9-domain-name">Sustainability &amp; Environment</div></div>
+        <div class="s9-domain-card cat-infra"><div class="s9-domain-cat">Infrastructure</div><div class="s9-domain-name">Supply Chain &amp; Logistics</div></div>
+
+        <div class="s9-domain-card cat-infra"><div class="s9-domain-cat">Infrastructure</div><div class="s9-domain-name">Industrial Automation &amp; OT</div></div>
+        <div class="s9-domain-card cat-infra"><div class="s9-domain-cat">Infrastructure</div><div class="s9-domain-name">Maritime &amp; Coastal</div></div>
+        <div class="s9-domain-card cat-people"><div class="s9-domain-cat">People &amp; Place</div><div class="s9-domain-name">Emergency &amp; Safety</div></div>
+
+      </div>
+    </div>
+
+    <div class="slide-num">09 / 12</div>
     <div class="wordmark">
       <div class="wordmark-main">DigitAlchemy<span>®</span></div>
       <div class="wordmark-sub">Intelligence Platform</div>
