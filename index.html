@@ -525,6 +525,69 @@
     letter-spacing: 0.02em;
   }
 
+
+  /* ── SLIDE 6 — VIPER® ── */
+  .s6-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--d, 0s);
+  }
+  #s6.active .s6-in { opacity: 1; transform: translateY(0); }
+
+  #s6-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    opacity: 0.18;
+  }
+
+  .s6-layers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    flex: 1.05;
+    min-width: 0;
+  }
+  .s6-layer-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--white);
+    border-left: 2px solid var(--ink20);
+    padding: 0.45rem 0.7rem;
+    box-shadow: 0 2px 10px rgba(25,10,70,0.05);
+    transition: border-color 0.3s;
+  }
+  .s6-layer-row:hover { border-left-color: var(--gold); }
+  .s6-layer-n {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--gold);
+    width: 1.2rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .s6-layer-info { flex: 1; min-width: 0; }
+  .s6-layer-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .s6-layer-std {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--ink60);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 </style>
 </head>
 <body>
@@ -876,6 +939,76 @@
     </div>
   </div>
 
+  <!-- SLIDE 6 — VIPER® -->
+  <div class="slide" id="s6">
+    <canvas id="s6-canvas"></canvas>
+    <div class="slide-overlay"></div>
+    <div class="slide-content" style="padding:5.5rem 9vw; flex-direction:row; gap:5vw; align-items:center; justify-content:flex-start;">
+
+      <!-- LEFT -->
+      <div style="flex:0.85; min-width:0;">
+        <div class="eyebrow s6-in" style="--d:0.05s">Sensor Intelligence</div>
+        <div class="gold-rule s6-in" style="--d:0.10s"></div>
+        <h1 class="s6-in" style="--d:0.15s; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.8rem); font-weight:300; line-height:1.1; color:var(--ink); margin-bottom:0.6rem;">
+          VIPER<sup style="font-size:0.5em;">®</sup><br>
+          <em style="color:var(--gold);">Every sensor<br>justified by law.</em>
+        </h1>
+        <p class="s6-in" style="--d:0.22s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch; margin-bottom:0.8rem;">
+          <strong style="color:var(--ink); font-weight:500;">Vision · Infrastructure · Process · Evidence · Risk</strong>
+        </p>
+        <p class="s6-in" style="--d:0.28s; font-size:clamp(0.82rem,1.15vw,1rem); font-weight:300; color:var(--ink60); line-height:1.65; max-width:38ch; margin-bottom:0.8rem;">
+          VIPER® algorithmically derives sensor specifications from the <strong style="color:var(--ink); font-weight:500;">Periodichotomy®</strong> regulatory corpus — not from vendor catalogues. Every sensor recommendation is traceable to a specific standard or regulation through a deterministic 14-layer pipeline.
+        </p>
+        <!-- Stats row -->
+        <div class="s6-in" style="--d:0.34s; display:flex; gap:1.2rem; flex-wrap:wrap;">
+          <div style="text-align:left;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.8vw,2.4rem); font-weight:300; color:var(--gold); line-height:1;">304</div>
+            <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">Sensor Specs</div>
+          </div>
+          <div style="text-align:left;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.8vw,2.4rem); font-weight:300; color:var(--gold); line-height:1;">9</div>
+            <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">Scopes</div>
+          </div>
+          <div style="text-align:left;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.8vw,2.4rem); font-weight:300; color:var(--gold); line-height:1;">1,074</div>
+            <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">Asset Archetypes</div>
+          </div>
+          <div style="text-align:left;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.8vw,2.4rem); font-weight:300; color:var(--gold); line-height:1;">2</div>
+            <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink60);">Patent Filings</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: 14-layer grid -->
+      <div class="s6-in" style="--d:0.40s; flex:1.1; min-width:0; display:flex; flex-direction:column; gap:0.4rem;">
+        <div style="font-size:0.65rem; font-weight:600; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:0.3rem;">The 14-Layer Derivation Pipeline</div>
+        <div class="s6-layers">
+          <div class="s6-layer-row"><div class="s6-layer-n">01</div><div class="s6-layer-info"><div class="s6-layer-name">Asset Class</div><div class="s6-layer-std">OmniClass Table 11</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">02</div><div class="s6-layer-info"><div class="s6-layer-name">Category</div><div class="s6-layer-std">OmniClass Table 11</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">03</div><div class="s6-layer-info"><div class="s6-layer-name">Archetype</div><div class="s6-layer-std">OmniClass Table 11</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">04</div><div class="s6-layer-info"><div class="s6-layer-name">Zone Type</div><div class="s6-layer-std">Uniclass SL</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">05</div><div class="s6-layer-info"><div class="s6-layer-name">Zone Attributes</div><div class="s6-layer-std">COBie-aligned</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">06</div><div class="s6-layer-info"><div class="s6-layer-name">Zone Profile</div><div class="s6-layer-std">Rules-based logic</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">07</div><div class="s6-layer-info"><div class="s6-layer-name">Zone Systems</div><div class="s6-layer-std">COBie Zone / System overlays</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">08</div><div class="s6-layer-info"><div class="s6-layer-name">Sensor Class</div><div class="s6-layer-std">Brick Schema</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">09</div><div class="s6-layer-info"><div class="s6-layer-name">Product Classification</div><div class="s6-layer-std">Uniclass Pr (Products)</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">10</div><div class="s6-layer-info"><div class="s6-layer-name">System Ownership</div><div class="s6-layer-std">Uniclass Ss (Systems)</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">11</div><div class="s6-layer-info"><div class="s6-layer-name">Sensor Instance</div><div class="s6-layer-std">Project Haystack</div></div></div>
+          <div class="s6-layer-row"><div class="s6-layer-n">12</div><div class="s6-layer-info"><div class="s6-layer-name">Rules Engine</div><div class="s6-layer-std">Periodichotomy® corpus</div></div></div>
+          <div class="s6-layer-row" style="border-left-color:var(--gold);"><div class="s6-layer-n">13</div><div class="s6-layer-info"><div class="s6-layer-name">Handover &amp; Delivery</div><div class="s6-layer-std">COBie / FM outputs</div></div></div>
+          <div class="s6-layer-row" style="border-left-color:var(--gold); background:rgba(201,168,76,0.06);"><div class="s6-layer-n">14</div><div class="s6-layer-info"><div class="s6-layer-name">AAS Digital Envelope</div><div class="s6-layer-std">IEC 63278 — Lifecycle container</div></div></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="slide-num">06 / 12</div>
+    <div class="wordmark">
+      <div class="wordmark-main">DigitAlchemy<span>®</span></div>
+      <div class="wordmark-sub">Intelligence Platform</div>
+    </div>
+  </div>
+
   <!-- NAV DOTS + ARROWS -->
   <div id="nav-dots">
     <div class="nav-arrow" id="arrow-up">
@@ -931,6 +1064,53 @@
     const dx = tx - e.changedTouches[0].clientX;
     if (Math.abs(dx) > 50) goTo(current + (dx > 0 ? 1 : -1));
   });
+
+  // ── VIPER S6 node-network canvas ──
+  (function(){
+    const cv = document.getElementById('s6-canvas');
+    if (!cv) return;
+    const ctx = cv.getContext('2d');
+    let W, H, nodes = [];
+    function resize(){ W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    for(let i=0;i<55;i++) nodes.push({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-0.5)*0.4, vy: (Math.random()-0.5)*0.4,
+      r: Math.random()*2.5+1
+    });
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      // lines
+      for(let i=0;i<nodes.length;i++){
+        for(let j=i+1;j<nodes.length;j++){
+          const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+          const d=Math.sqrt(dx*dx+dy*dy);
+          if(d<140){
+            ctx.beginPath();
+            ctx.strokeStyle=`rgba(201,168,76,${0.5*(1-d/140)})`;
+            ctx.lineWidth=0.6;
+            ctx.moveTo(nodes[i].x,nodes[i].y);
+            ctx.lineTo(nodes[j].x,nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      // nodes
+      nodes.forEach(n=>{
+        ctx.beginPath();
+        ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(25,10,70,0.7)';
+        ctx.fill();
+        n.x+=n.vx; n.y+=n.vy;
+        if(n.x<0||n.x>W) n.vx*=-1;
+        if(n.y<0||n.y>H) n.vy*=-1;
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
 </script>
 </body>
 </html>
